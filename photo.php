@@ -63,6 +63,7 @@ if (isset($_POST['submit'])) {
 
           <!-- Post Content -->
           <p><?php echo $photo->description; ?></p>
+          <p><a href="admin/<?php echo $photo->picture_path(); ?>" target="_blank" class="btn btn-danger">Download</a></p>
 
 
           <hr>
