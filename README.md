@@ -1,4 +1,4 @@
-# PGhallery
+# MyGallery
 
 **PGhallery** is an open source, gallery app
 
