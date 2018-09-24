@@ -59,7 +59,8 @@ if (isset($_POST['submit'])) {
                     </form>
                 </div>  
                 <div class="col-md-6">
-                    <table class="table table-bordered table-hover">
+                    <div class="dataTable_wrapper">
+                    <table class="table table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
                                 <th>id</th>
@@ -89,6 +90,7 @@ if (isset($_POST['submit'])) {
                             
                         </tbody>
                     </table>
+                    </div>
                 </div> 
             </div>
 
@@ -112,3 +114,11 @@ if (isset($_POST['submit'])) {
      ?>
 
 <?php include("includes/footer.php"); ?>
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+</script>
+

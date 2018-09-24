@@ -9,6 +9,10 @@
 <!-- Metis Menu Plugin JavaScript -->
 <script src="js/metisMenu.min.js"></script>
 
+<!-- DataTables JavaScript -->
+<script src="js/dataTables/jquery.dataTables.min.js"></script>
+<script src="js/dataTables/dataTables.bootstrap.min.js"></script>
+
 <!-- Custom Theme JavaScript -->
 <script src="js/startmin.js"></script>
 <script src="http://tinymce.cachefly.net/4.1/tinymce.min.js"></script>

@@ -21,8 +21,9 @@
                 </div>
                 
                 <div class="col-lg-12">
+                    <div class="dataTable_wrapper">
                     
-                    <table class="table table-bordered table-hover">
+                    <table class="table table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
                                 <th>id</th>
@@ -62,6 +63,7 @@
                             
                         </tbody>
                     </table>
+                    </div>
                 </div>
              
             </div>
@@ -72,3 +74,10 @@
     </div>
 
 <?php include("includes/footer.php"); ?>
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+</script>

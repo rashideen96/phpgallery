@@ -20,6 +20,12 @@
     <!-- MetisMenu CSS -->
     <link href="css/metisMenu.min.css" rel="stylesheet">
 
+    <!-- DataTables CSS -->
+    <link href="css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="css/dataTables/dataTables.responsive.css" rel="stylesheet">
+
     <!-- Timeline CSS -->
     <link href="css/timeline.css" rel="stylesheet">
 

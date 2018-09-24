@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
                             <input type="text" name="description" class="form-control" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <input type="file" name="file_upload" class="form-control">
+                            <input type="file" name="file_upload">
                         </div>
                         <input type="submit" name="submit" class="btn btn-primary">
                     </form>

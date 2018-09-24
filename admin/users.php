@@ -22,7 +22,9 @@
                 
                 <div class="col-lg-12">
                     <p><a href="add_user.php" class="btn btn-primary"><i class="fa fa-plus fa-fw"></i></a></p>
-                    <table class="table table-bordered table-hover">
+                    <hr>
+                    <div class="dataTable_wrapper">
+                    <table class="table table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
                                 <th>id</th>
@@ -61,6 +63,7 @@
                             
                         </tbody>
                     </table>
+                    </div>
                 </div>
              
             </div>
@@ -71,3 +74,10 @@
     </div>
 
 <?php include("includes/footer.php"); ?>
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+</script>
