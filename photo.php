@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
               <p><a href="admin/<?php echo $photo->picture_path(); ?>" target="_blank" class="btn btn-danger">Download</a></p>
               </div>
                <div class="panel-footer">
-                   Posted on September 25, 2018 by
+                   <span class="prettydate">Jan 01 2014 20:14:11</span> by
                   <a href="#">Deen</a>
                </div>
           </div>
@@ -99,7 +99,8 @@ if (isset($_POST['submit'])) {
                         <img class="media-object" src="http://placehold.it/64x64" alt="">
                     </a>
                     <div class="media-body">
-                        <h4 class="media-heading"><?php echo $comment->author; ?> <small><?php echo $comment->date; ?></small>
+                        <h4 class="media-heading"><?php echo $comment->author; ?> <small>
+                          <span class="prettydate"><?php echo $comment->date; ?></span></small>
                         </h4><p><?php echo $comment->body; ?></p>
                     </div>
              </div>
@@ -162,3 +163,6 @@ if (isset($_POST['submit'])) {
 
 
 <?php include("includes/footer.php"); ?>   
+<script>
+  $(".prettydate").prettydate();
+</script>
