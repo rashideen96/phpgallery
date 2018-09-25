@@ -6,8 +6,9 @@ class Photo extends Db_object {
 
 
 	protected static $db_table = "photos";
-	protected static $db_table_fields = array('id', 'title', 'caption', 'description','filename', 'alternate', 'type','size' );
+	protected static $db_table_fields = array('id', 'cat_id', 'title', 'caption', 'description','filename', 'alternate', 'type','size' );
 	public $id;
+	public $cat_id;
 	public $title;
 	public $caption;
 	public $alternate;
@@ -152,6 +153,14 @@ class Photo extends Db_object {
 		$sql .= "OFFSET {$offset}";
 
 		return $sql;
+	}
+
+	public static function find_category($cat_id) {
+
+		global $database;
+		$the_result_array = self::find_by_query("SELECT * FROM " . self::$db_table . " WHERE cat_id = $cat_id LIMIT 1");
+
+		return !empty($the_result_array) ? array_shift($the_result_array) : false;
 	}
 
 

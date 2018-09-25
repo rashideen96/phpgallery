@@ -2,12 +2,14 @@
 <?php 
 
 
+
 if (empty($_GET['id'])) {
     
     redirect("index.php");
 }
 
 $photo = Photo::find_by_id($_GET['id']);
+$categories = Kategori::find_by_id($photo->cat_id);
 
 if (isset($_POST['submit'])) {
     
@@ -63,6 +65,7 @@ if (isset($_POST['submit'])) {
 
           <!-- Post Content -->
           <p><?php echo $photo->description; ?></p>
+          <p>category: <?php echo $categories->title; ?></p>
           <p><a href="admin/<?php echo $photo->picture_path(); ?>" target="_blank" class="btn btn-danger">Download</a></p>
 
 

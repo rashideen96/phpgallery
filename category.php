@@ -2,55 +2,24 @@
 
 <?php 
 
-$photos = Photo::find_all();
+if (empty($_GET['id'])) {
+    
+    redirect("index.php");
+}
+
+$photos = Photo::find_by_category($_GET['id']);
+
+
  ?>
 
 
 <div class="row">
 	<div class="col-md-4">
-		<div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4>Blog Search</h4>
-                    </div>
-                    <div class="panel-body">
-                        <form action="search.php" method="post">
-                        <div class="input-group">
-                        <input type="text" class="form-control" name="search">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary" type="submit" name="cari">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                        </div>
-                        </form>
-                    <!-- /.
-                    </div>
-                    input-group -->
-                    </div>
-                </div>
-                <ul class="list-group">
-                               
 
-                               
+            
+    <?php include("includes/sidebar.php"); ?>
 
-    <li class="list-group-item">
-        <span class="badge">14</span>
-        <a href="category.php?id=">Nature</a>
-    </li>
-    <li class="list-group-item">
-        <span class="badge">14</span>
-        <a href="category.php?id=">Nature</a>
-    </li>
-    <li class="list-group-item">
-        <span class="badge">14</span>
-        <a href="category.php?id=">Nature</a>
-    </li>
-
-                               
-                                
-                                
-                            </ul>
-	</div>
+    </div>
 
 	<div class="col-md-8">
 		<?php //$photos = Photo::find_all_desc(); 

@@ -57,6 +57,11 @@ public $upload_errors_array = array(
 
 	}
 
+	public static function find_by_category($cat_id) {
+
+		return static::find_by_query("SELECT * FROM " . static::$db_table . " WHERE cat_id='$cat_id'");
+	}
+
 
 
 	public static function find_all_desc() {
@@ -262,6 +267,8 @@ public $upload_errors_array = array(
 
 
 	}
+
+	
 
 
 	

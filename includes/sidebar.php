@@ -36,7 +36,7 @@ $categories = Kategori::find_all();
 
     <li class="list-group-item">
         <span class="badge">14</span>
-        <a href="category.php?id="><?php echo $category->title; ?></a>
+        <a href="category.php?id=<?php echo $category->id; ?>"><?php echo $category->title; ?></a>
     </li>
 
                                 <?php }

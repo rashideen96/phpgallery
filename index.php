@@ -4,7 +4,7 @@
 
 $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
 
-$items_per_page = 1;
+$items_per_page = 3;
 $items_total_count = Photo::count_all();
 
 
@@ -12,13 +12,13 @@ $items_total_count = Photo::count_all();
 $paginate = new Paginate($page, $items_per_page, $items_total_count);
 
 //query
-$sql = "SELECT * FROM photos ORDER BY id DESC ";
-$sql .= "LIMIT {$items_per_page} ";
-$sql .= "OFFSET {$paginate->offset()}";
+// $sql = "SELECT * FROM photos ORDER BY id DESC ";
+// $sql .= "LIMIT {$items_per_page} ";
+// $sql .= "OFFSET {$paginate->offset()}";
 
 //custom function....
-// $offset = $paginate->offset();
-// $x = Photo::paginate($items_per_page, $offset);
+//$offset = $paginate->offset();
+$sql = Photo::paginate($items_per_page, $paginate->offset());
 
 
 $photos = Photo::find_by_query($sql);
