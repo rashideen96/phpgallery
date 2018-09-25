@@ -8,7 +8,7 @@ $categories = Kategori::find_all();
             <!-- Blog Search Well -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4>Blog Search</h4>
+                        <h4>Image Search</h4>
                     </div>
                     <div class="panel-body">
                         <form action="search.php" method="post">
@@ -35,7 +35,9 @@ $categories = Kategori::find_all();
                                 foreach ($categories as $category) {?>
 
     <li class="list-group-item">
-        <span class="badge">14</span>
+        <span class="badge"><?php $cat_count = Photo::find_category($category->id);
+        echo count($cat_count);
+         ?></span>
         <a href="category.php?id=<?php echo $category->id; ?>"><?php echo $category->title; ?></a>
     </li>
 

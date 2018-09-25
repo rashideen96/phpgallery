@@ -54,8 +54,8 @@ $photos = Photo::find_pattern($search);
                             <a href="#" class="btn btn-primary">Read More &rarr;</a>
                             </div>
                              <div class="panel-footer">
-                                 Posted on January 1, 2017 by
-                                <a href="#">Start Bootstrap</a>
+                                 Posted on September 25, 2018 by
+                                <a href="#">Deen</a>
                              </div>
                         </div>
 

@@ -28,6 +28,7 @@
                                 <th>id</th>
                                 <th>Photo</th>
                                 <th>title</th>
+                                <th>cid</th>
                                 <th>file name</th>
                                 <th>size</th>
                                 <th>Edit</th>
@@ -44,9 +45,15 @@
                                 <tr>
                                     <td><?php echo $photo->id; ?></td>
                                     <td>
-                                        <img src="<?php echo $photo->picture_path(); ?>" width="200px">
+                                        <img src="<?php echo $photo->picture_path(); ?>" width="100%">
                                     </td>
                                     <td><?php echo $photo->title; ?></td>
+                                    <td><?php 
+
+                                    $categories = Kategori::find_by_id($photo->cat_id);
+                                    echo $categories->title;
+
+                                     ?></td>
                                     <td><?php echo $photo->filename; ?></td>
                                     <td><?php echo $photo->size; ?></td>
                                     <td><a href="edit_photo.php?id=<?php echo $photo->id; ?>">Edit</a></td>

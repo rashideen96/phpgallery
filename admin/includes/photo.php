@@ -148,20 +148,20 @@ class Photo extends Db_object {
 	public static function paginate($items_per_page, $offset){
 
 
-		$sql = "SELECT * FROM photos ";
+		$sql = "SELECT * FROM photos ORDER BY id DESC ";
 		$sql .= "LIMIT {$items_per_page} ";
 		$sql .= "OFFSET {$offset}";
 
 		return $sql;
 	}
 
-	public static function find_category($cat_id) {
+	// public static function find_category($cat_id) {
 
-		global $database;
-		$the_result_array = self::find_by_query("SELECT * FROM " . self::$db_table . " WHERE cat_id = $cat_id LIMIT 1");
+	// 	global $database;
+	// 	$the_result_array = self::find_by_query("SELECT * FROM " . self::$db_table . " WHERE cat_id = $cat_id LIMIT 1");
 
-		return !empty($the_result_array) ? array_shift($the_result_array) : false;
-	}
+	// 	return !empty($the_result_array) ? array_shift($the_result_array) : false;
+	// }
 
 
 

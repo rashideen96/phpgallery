@@ -59,7 +59,22 @@ public $upload_errors_array = array(
 
 	public static function find_by_category($cat_id) {
 
-		return static::find_by_query("SELECT * FROM " . static::$db_table . " WHERE cat_id='$cat_id'");
+		return static::find_by_query("SELECT * FROM " . static::$db_table . " WHERE cat_id='$cat_id' ORDER BY id DESC");
+	}
+
+
+
+	public static function find_category($category_id=0) {
+
+		global $database;
+
+		$sql = "SELECT * FROM " .static::$db_table;
+		$sql .= " WHERE cat_id=".$database->escape_string($category_id);
+		$sql .= " ORDER BY id DESC";
+
+
+		return static::find_by_query($sql);
+
 	}
 
 

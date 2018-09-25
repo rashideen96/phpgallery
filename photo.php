@@ -42,34 +42,24 @@ if (isset($_POST['submit'])) {
         <!-- Post Content Column -->
         <div class="col-lg-8">
 
-          <!-- Title -->
-          <h1 class="mt-4"><?php echo $photo->title; ?></h1>
+          <div class="panel panel-default">
 
-          <!-- Author -->
-          <p class="lead">
-            by
-            <a href="#">Start Bootstrap</a>
-          </p>
-
-          <hr>
-
-          <!-- Date/Time -->
-          <p>Posted on January 1, 2018 at 12:00 PM</p>
-
-          <hr>
-
-          <!-- Preview Image -->
-          <img class="img-fluid rounded" src="admin/<?php echo $photo->picture_path(); ?>" alt="" width="100%">
-
-          <hr>
-
-          <!-- Post Content -->
-          <p><?php echo $photo->description; ?></p>
-          <p>category: <?php echo $categories->title; ?></p>
-          <p><a href="admin/<?php echo $photo->picture_path(); ?>" target="_blank" class="btn btn-danger">Download</a></p>
+              <a href="photo.php?id=<?php echo $photo->id; ?>"><img class="panel-img-top" src="admin/<?php echo $photo->picture_path(); ?>" alt="sdsdf" width="100%"></a>
+              <div class="panel-body">
+          
+                  <h2><?php echo $photo->title; ?></h2>
+                  <p><?php echo $photo->description; ?></p>
+              <p><a href="admin/<?php echo $photo->picture_path(); ?>" target="_blank" class="btn btn-danger">Download</a></p>
+              </div>
+               <div class="panel-footer">
+                   Posted on September 25, 2018 by
+                  <a href="#">Deen</a>
+               </div>
+          </div>
 
 
-          <hr>
+
+
 
           <!-- Comments Form -->
 
@@ -122,6 +112,31 @@ if (isset($_POST['submit'])) {
           <!-- Comment with nested comments -->
           
 
+        </div>
+
+        <div class="col-lg-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Image detail
+            </div>
+            <div class="panel-body">
+              <?php 
+
+                //$photos = Photo::find_by_id(8);
+
+                 ?>
+                <img class="thumbnail" src="admin/<?php echo $photo->picture_path(); ?>" width="100%">
+                <p>Uploaded on: 4/6/2018</p>
+                <p>Photo id: <?php echo $photo->id; ?></p>
+                <p>Filename: <?php echo wordwrap($photo->filename); ?></p>
+                <p>File type: <?php echo $photo->type; ?></p>
+                <p>File size: <?php echo $photo->size; ?></p>
+            </div>
+            <div class="panel-footer">
+                <input type="submit" name="edit" class="btn btn-block btn-success" value="Edit">
+              
+            </div>
+          </div>
         </div>
 
         <!-- Sidebar Widgets Column -->

@@ -85,7 +85,10 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <input type="text" name="description" class="form-control" autocomplete="off">
+                            <textarea class="form-control" name="description" placeholder="insert description here..." width="700" height="500">
+                                
+                            </textarea>
+                            
                         </div>
                         <div class="form-group">
                             <input type="file" name="file_upload">

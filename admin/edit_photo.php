@@ -13,7 +13,8 @@ if (empty($_GET['id'])) {
     $photo = Photo::find_by_id($_GET['id']);
     if (isset($_POST['edit'])) {
         if ($photo) {
-            
+
+            $photo->cat_id = $_POST['photo_category'];
             $photo->title = $_POST['title'];
             $photo->caption = $_POST['caption'];
             $photo->alternate = $_POST['alternate'];
@@ -66,6 +67,30 @@ if (empty($_GET['id'])) {
                             <label for="title">Title</label>
                             <input type="text" name="title" class="form-control" value="<?php echo $photo->title; ?>">
                         </div>
+
+                        <div class="form-group">
+                           <label for="select_category">Select Category </label>
+                            <select name="photo_category" id="">
+
+                                
+                                <?php
+
+                                $categories = Kategori::find_all();
+                                
+                                
+                                foreach ($categories as $category) {
+                                    
+                                    
+
+                                    echo "<option value='$category->id'>{$category->title}</option>";
+                                }
+                                    
+                                    
+                               
+                                ?>
+                            </select>
+                        </div>
+
                         <div class="form-group">
                             <a class="thumbnail" href="#"><img src="<?php echo $photo->picture_path(); ?>"></a>
                         </div>
