@@ -23,31 +23,13 @@
                 </div>
                 <?php 
                 
-                // $photos = new Photo();
-
-                // $photos->title = "test_image";
-
-                // $photos->save();
-
+               
                 $users = User::find_all();
-
-                // foreach ($users as $user) {
-                    
-                //     echo $user->username . "<br>";
-                // }
-
-
-                // $photos = Photo::find_by_id(6);
-
-                // $photos->delete_photo();
 
 
                 $user = User::find_by_id(1);
                 
-                //echo $user->username;
-
-
-                // $user->update();
+                
                  ?>
                  
             </div>
@@ -77,7 +59,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
@@ -100,7 +82,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-yellow">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">
@@ -123,7 +105,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
                                     <div class="col-xs-3">

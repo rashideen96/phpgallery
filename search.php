@@ -51,7 +51,7 @@ $photos = Photo::find_pattern($search);
                         
                                 <h2><?php echo $photo->title; ?></h2>
                                 <p><?php echo $photo->description; ?></p>
-                            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                            <a href="photo.php?id=<?php echo $photo->id; ?>" class="btn btn-primary">Read More</a>
                             </div>
                              <div class="panel-footer">
                                  Posted on September 25, 2018 by
@@ -82,7 +82,10 @@ $photos = Photo::find_pattern($search);
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <hr>
+                    <div class="text-center">
+                        <p>Copyright &copy; Your Website 2014</p>
+                    </div>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

@@ -144,6 +144,18 @@ if (isset($_POST['submit'])) {
 
       </div>
       <!-- /.row -->
+      <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <hr>
+                    <div class="text-center">
+                        <p>Copyright &copy; Your Website 2014</p>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
 
 
 

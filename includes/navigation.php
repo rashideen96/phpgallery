@@ -17,11 +17,22 @@
                         <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="services.php">Services</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="admin">Admin</a>
-                    </li>
+                    </li> -->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+     
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $session->user_name; ?> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="admin">Dashboard</a></li>
+                      <li><a href="admin/logout.php">Logout</a></li>
+                      
+                    </ul>
+                  </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

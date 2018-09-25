@@ -4,7 +4,7 @@
 
 
 $session->logout();
-redirect("login.php");
+redirect("../index.php");
 
 
 
