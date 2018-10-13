@@ -38,4 +38,4 @@ Have a bug or an issue with this template? [Open a new issue](https://github.com
 Code released under the [MIT]
 
 ## Donate
-https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J3UVCJEHMWUD6
+[Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J3UVCJEHMWUD6)
