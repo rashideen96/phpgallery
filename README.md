@@ -1,6 +1,6 @@
-# MyGallery
+# OpenGallery
 
-**PGhallery** is an open source, gallery app
+**OpenGallery** is an open source, gallery app
 
 ## Features
 
